@@ -1,0 +1,259 @@
+footer {
+  .content {
+    .top {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+      color: var(--white);
+      border-radius: 15px;
+      padding: 70px 95px;
+      background-image: url("../../public/assets/shared/desktop/bg-pattern-call-to-action.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: var(--peach);
+
+      .text {
+        max-width: 460px;
+
+        & h2,
+        & p {
+          margin: 0;
+        }
+
+        & h2 {
+          max-width: 300px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .bottom {
+      background-color: var(--black);
+      z-index: -1;
+      margin-top: -80px;
+
+      .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 150px 0 30px 0;
+        border-bottom: 1px solid var(--dark-grey);
+
+        & .logo {
+          height: 24px;
+
+          img {
+            height: 100%;
+          }
+        }
+
+        & ul {
+          display: flex;
+          font-weight: 400;
+
+          li {
+            color: var(--white);
+            letter-spacing: 2px;
+
+            &:not(:last-child) {
+              margin-right: 40px;
+            }
+          }
+        }
+      }
+
+      & .contacts {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0 60px 0;
+
+        & .text {
+          display: flex;
+          color: rgba(#fff, 0.5);
+
+          & div:not(:last-child) {
+            margin-right: 200px;
+          }
+
+          & h4,
+          & p {
+            margin: 0;
+          }
+
+          & span:not(:last-child) {
+            margin-right: 250px;
+          }
+        }
+
+        & .socials {
+          align-self: flex-end;
+
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+
+            li {
+              a:hover {
+                svg {
+                  path {
+                    fill: var(--light-peach);
+                  }
+                }
+              }
+
+              &:not(:last-child) {
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767.98px) {
+  footer {
+    .content {
+      .top {
+        padding: 60px 20px;
+
+        .text {
+          max-width: 100%;
+
+          & h2 {
+            max-width: 100%;
+            font-size: 32px;
+            letter-spacing: normal;
+          }
+
+          & p {
+            max-width: 100%;
+          }
+        }
+      }
+
+      .bottom {
+        background-color: var(--black);
+        z-index: -1;
+        margin-top: -180px;
+
+        .footer-nav {
+          flex-direction: column;
+
+          padding: 250px 0 20px 0;
+          border-bottom: none;
+
+          & .logo {
+            height: 24px;
+            margin: 0 auto;
+
+            img {
+              height: 100%;
+            }
+          }
+
+          & ul {
+            border-top: 1px solid var(--dark-grey);
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+            padding: 0;
+            padding-top: 30px;
+            margin-top: 30px;
+
+            li {
+              color: var(--white);
+              letter-spacing: 2px;
+              width: 100%;
+
+              &:not(:last-child) {
+                margin-bottom: 20px;
+              }
+            }
+          }
+        }
+
+        & .contacts {
+          flex-direction: column;
+
+          padding: 0px 0 60px 0;
+
+          & .text {
+            flex-direction: column;
+            text-align: center;
+
+            & div {
+              width: 100%;
+            }
+
+            & div:not(:last-child) {
+              margin-right: 0px;
+              margin-bottom: 20px;
+            }
+
+            & h4,
+            & p {
+              margin: 0;
+              width: 100%;
+            }
+
+            & span:not(:last-child) {
+              margin-right: 0px;
+              margin-bottom: 20px;
+            }
+          }
+
+          & .socials {
+            margin-top: 40px;
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991.98px) {
+  footer {
+    & .content {
+      & .top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        & .text {
+          max-width: 100%;
+
+          & p {
+            max-width: 430px;
+            margin: 10px auto 40px auto;
+          }
+
+          & h2 {
+            max-width: 335px;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .bottom {
+        & .contacts {
+          & .text {
+            & div:not(:last-child) {
+              margin-right: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

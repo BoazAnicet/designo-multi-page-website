@@ -1,65 +1,208 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Footer from "../components/footer";
+import Header from "../components/header";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>DESIGNO</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Header />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+      <main id="index">
+        <section id="hero">
+          <div className="container">
+            <div className="hero">
+              <div className="text">
+                <h2
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-duration="750"
+                  data-aos-delay="100"
+                  data-aos-easing="ease-in-out"
+                  data-aos-once="true"
+                >
+                  Award-winning custom designs and digital branding solutions
+                </h2>
+                <p
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-duration="750"
+                  data-aos-delay="200"
+                  data-aos-easing="ease-in-out"
+                  data-aos-once="true"
+                >
+                  With over 10 years in the industry, we are experienced in creating fully
+                  responsive websites, app design, and engaging brand experiences. Find out more
+                  about our services.
+                </p>
+                <button
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-duration="750"
+                  data-aos-delay="300"
+                  data-aos-easing="ease-in-out"
+                  data-aos-once="true"
+                >
+                  LEARN MORE
+                </button>
+              </div>
+              <div
+                className="image"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-duration="750"
+                data-aos-delay="300"
+                data-aos-easing="ease-in-out"
+                data-aos-once="true"
+              >
+                <img src="/assets/home/desktop/image-hero-phone.png" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <div className="links">
+              <Link href="/web-design">
+                <a
+                  className="card web-design"
+                  id="span-2-rows"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-duration="750"
+                  data-aos-delay="100"
+                  data-aos-easing="ease-in-out"
+                  data-aos-once="true"
+                  data-aos-anchor=".links"
+                >
+                  <h2>Web Design</h2>
+                  <div>
+                    <h3>View Projects</h3>
+                    <img src="/assets/shared/desktop/icon-right-arrow.svg" alt="right arrow" />
+                  </div>
+                </a>
+              </Link>
+              <Link href="/app-design">
+                <a
+                  className="card app-design"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-duration="750"
+                  data-aos-delay="200"
+                  data-aos-easing="ease-in-out"
+                  data-aos-once="true"
+                  data-aos-anchor=".links"
+                >
+                  <h2>App Design</h2>
+                  <div>
+                    <h3>View Projects</h3>
+                    <img src="/assets/shared/desktop/icon-right-arrow.svg" alt="right arrow" />
+                  </div>
+                </a>
+              </Link>
+              <Link href="/graphic-design">
+                <a
+                  className="card graphic-design"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-duration="750"
+                  data-aos-delay="300"
+                  data-aos-easing="ease-in-out"
+                  data-aos-once="true"
+                  data-aos-anchor=".links"
+                >
+                  <h2>Graphic Design</h2>
+                  <div>
+                    <h3>View Projects</h3>
+                    <img src="/assets/shared/desktop/icon-right-arrow.svg" alt="right arrow" />
+                  </div>
+                </a>
+              </Link>
+            </div>
+          </div>
+        </section>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <section>
+          <div className="container">
+            <div id="who-we-are">
+              <div
+                className="trait"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-duration="750"
+                data-aos-delay="100"
+                data-aos-easing="ease-in-out"
+                data-aos-once="true"
+                data-aos-anchor="#who-we-are"
+              >
+                <div className="image">
+                  <img src="/assets/home/desktop/illustration-passionate.svg" alt="" />
+                </div>
+                <div className="text">
+                  <h3>Passionate</h3>
+                  <p>
+                    Each project starts with an in-depth brand research to ensure we only create
+                    products that serve a purpose. We merge art, design, and technology into
+                    exciting new solutions.
+                  </p>
+                </div>
+              </div>
+              <div
+                className="trait"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-duration="750"
+                data-aos-delay="200"
+                data-aos-easing="ease-in-out"
+                data-aos-once="true"
+                data-aos-anchor="#who-we-are"
+              >
+                <div className="image">
+                  <img src="/assets/home/desktop/illustration-resourceful.svg" alt="" />
+                </div>
+                <div className="text">
+                  <h3>Resourceful</h3>
+                  <p>
+                    Everything that we do has a strategic purpose. We use an agile approach in all
+                    of our projects and value customer collaboration. It guarantees superior results
+                    that fulfill our clients’ needs.
+                  </p>
+                </div>
+              </div>
+              <div
+                className="trait"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-duration="750"
+                data-aos-delay="300"
+                data-aos-easing="ease-in-out"
+                data-aos-once="true"
+                data-aos-anchor="#who-we-are"
+              >
+                <div className="image">
+                  <img src="/assets/home/desktop/illustration-friendly.svg" alt="" />
+                </div>
+                <div className="text">
+                  <h3>Friendly</h3>
+                  <p>
+                    We are a group of enthusiastic folks who know how to put people first. Our
+                    success depends on our customers, and we strive to give them the best experience
+                    a company can provide.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+      <Footer />
+    </>
+  );
 }

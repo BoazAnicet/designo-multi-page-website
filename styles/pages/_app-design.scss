@@ -1,0 +1,125 @@
+#app-design {
+  #apps {
+    margin-bottom: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    .design {
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        cursor: pointer;
+        & .text {
+          background-color: var(--peach);
+          color: var(--white);
+
+          & h3 {
+            color: var(--white);
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .text {
+        background-color: var(--lighter-peach);
+        text-align: center;
+        padding: 30px;
+
+        & h3,
+        & p {
+          margin: 0;
+        }
+
+        h3 {
+          color: var(--peach);
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .links {
+    margin-bottom: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    height: 320px;
+
+    .card {
+      border-radius: 15px;
+      color: var(--white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-position: center;
+      text-decoration: none;
+
+      & div {
+        display: flex;
+        align-items: center;
+
+        & img {
+          height: 12px;
+          margin-left: 10px;
+        }
+      }
+
+      & h2,
+      & h3 {
+        margin: 0;
+        text-transform: uppercase;
+      }
+
+      & h2 {
+        margin-bottom: 20px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.web-design {
+        background-image: linear-gradient(rgba(#000, 0.5), rgba(#000, 0.5)),
+          url("../../public/assets/home/desktop/image-web-design-large.jpg");
+
+        &:hover {
+          background-image: linear-gradient(rgba(#e7816b, 0.5), rgba(#e7816b, 0.5)),
+            url("../../public/assets/home/desktop/image-web-design-large.jpg");
+        }
+      }
+      &.app-design {
+        background-image: linear-gradient(rgba(#000, 0.5), rgba(#000, 0.5)),
+          url("../../public/assets/home/desktop/image-app-design.jpg");
+
+        &:hover {
+          background-image: linear-gradient(rgba(#e7816b, 0.5), rgba(#e7816b, 0.5)),
+            url("../../public/assets/home/desktop/image-app-design.jpg");
+        }
+      }
+      &.graphic-design {
+        background-image: linear-gradient(rgba(#000, 0.5), rgba(#000, 0.5)),
+          url("../../public/assets/home/desktop/image-graphic-design.jpg");
+
+        &:hover {
+          background-image: linear-gradient(rgba(#e7816b, 0.5), rgba(#e7816b, 0.5)),
+            url("../../public/assets/home/desktop/image-graphic-design.jpg");
+        }
+      }
+
+      &#span-2-rows {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+    }
+  }
+}

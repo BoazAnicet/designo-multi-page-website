@@ -1,0 +1,178 @@
+#locations_section {
+  .locations {
+    margin-bottom: 150px;
+
+    .location {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      height: 326px;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+      .text {
+        border-radius: 15px;
+        background-color: var(--lighter-peach);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        & h2,
+        & h4,
+        & p {
+          margin: 0;
+        }
+
+        & h2 {
+          color: var(--peach);
+          margin-bottom: 20px;
+        }
+
+        & .contact-info {
+          display: flex;
+
+          & div:not(:last-child) {
+            margin-right: 100px;
+          }
+        }
+
+        &:nth-child(odd) {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+        &:nth-child(even) {
+          grid-column-start: 2;
+          grid-column-end: 4;
+        }
+      }
+
+      &:nth-child(1) .image {
+        background-image: url("../../public/assets/locations/desktop/image-map-canada.png");
+      }
+      &:nth-child(2) .image {
+        background-image: url("../../public/assets/locations/desktop/image-map-australia.png");
+      }
+      &:nth-child(3) .image {
+        background-image: url("../../public/assets/locations/desktop/image-map-united-kingdom.png");
+      }
+
+      & .image {
+        border-radius: 15px;
+        overflow: hidden;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        & img {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991.98px) {
+  #locations_section {
+    .locations {
+      .location {
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        &:nth-child(1) .image {
+          background-image: url("../../public/assets/locations/tablet/image-map-canada.png");
+        }
+        &:nth-child(2) .image {
+          background-image: url("../../public/assets/locations/tablet/image-map-australia.png");
+        }
+        &:nth-child(3) .image {
+          background-image: url("../../public/assets/locations/tablet/image-map-uk.png");
+        }
+
+        &:nth-child(odd) {
+          flex-direction: column-reverse;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 150px;
+        }
+
+        .text {
+          height: 326px;
+        }
+
+        & .image {
+          height: 326px;
+        }
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  #locations_section {
+    .container {
+      padding: 0;
+      .locations {
+        margin-bottom: 100px;
+
+        .location {
+          gap: 0px;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+
+          &:nth-child(1) .image {
+            background-image: url("../../public/assets/locations/tablet/image-map-canada.png");
+          }
+          &:nth-child(2) .image {
+            background-image: url("../../public/assets/locations/tablet/image-map-australia.png");
+          }
+          &:nth-child(3) .image {
+            background-image: url("../../public/assets/locations/tablet/image-map-uk.png");
+          }
+
+          &:nth-child(odd) {
+            flex-direction: column-reverse;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 50px;
+          }
+
+          .text {
+            border-radius: 0px;
+
+            height: 326px;
+            text-align: center;
+
+            & h2 {
+              font-size: 32px;
+              letter-spacing: normal;
+            }
+
+            & .contact-info {
+              flex-direction: column;
+
+              & div:not(:last-child) {
+                margin-right: 0px;
+                margin-bottom: 20px;
+              }
+            }
+          }
+
+          & .image {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
